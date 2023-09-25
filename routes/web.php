@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FirtsControlller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $url ='https://www.linkedin.com/in/victorcupa/';
+    $video ="https://www.youtube.com/watch?v=3e1IsZJuYAw&list=PLZ2ovOgdI-kWWS9aq8mfUDkJRfYib-SvF&index=1&ab_channel=CodersFree";
+
+    return view('welcome',['links' =>$url,'videos' =>$video]);
 });
+ROUTE::get('/tests/',[FirtsControlller::class,'index' ] );
