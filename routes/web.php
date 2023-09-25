@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FirtsControlller;
+use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,4 +21,6 @@ Route::get('/', function () {
 
     return view('welcome',['links' =>$url,'videos' =>$video]);
 });
-ROUTE::get('/tests/',[FirtsControlller::class,'index' ] );
+ROUTE::get('/tests/',[FirtsControlller::class ,'index' ] );
+ROUTE::get('/tests/',[FirtsControlller::class,'formulario']);
+
